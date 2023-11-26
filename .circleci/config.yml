@@ -20,7 +20,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-              - 69:43:63:c3:51:02:3c:3a:86:ed:65:6e:18:7f:11:91
+              # - 69:43:63:c3:51:02:3c:3a:86:ed:65:6e:18:7f:11:91
               - b4:cd:8b:1c:48:75:f0:8a:19:9a:1a:8a:98:c2:89:31
       - run: ssh ${USER_NAME}@${HOST_NAME} 'cd /var/www/ && git pull origin main'
 
