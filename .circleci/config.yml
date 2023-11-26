@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.4-node-browsers
+    working_directory: src/
     steps:
       - checkout
       - run: composer install
@@ -26,6 +27,3 @@ workflows:
       - deploy:
           requires:
             - build
-
-
-
