@@ -3,19 +3,16 @@ orbs:
   aws-ecr: circleci/aws-ecr@6.4.0
 
 jobs:
-  build-and-deploy:
-    executor: aws-ecr/default
+  build:
+    docker:
+      - image: circleci/php:8.2.12-node-browsers
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 20.10.11
+      - run: sudo composer self-update --1
+      - run: composer install -n --prefer-dist
+      - run: npm ci
+      - run: npm run dev
       - run:
-          name: Build and Push Docker Image
-          command: |
-            docker build -t your-ecr-repo-url/your-image-name:$CIRCLE_SHA1 .
-            docker push your-ecr-repo-url/your-image-name:$CIRCLE_SHA1
-      - aws-ecr/ecr-login
-      - run:
-          name: Deploy to ECS
-          command: |
-            aws ecs update-service --cluster your-cluster-name --service your-service-name --force-new-deployment
+          name: php test
+          command: vendor/bin/phpunit
+
