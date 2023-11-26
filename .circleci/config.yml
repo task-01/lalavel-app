@@ -20,6 +20,9 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-              - 69:43:63:c3:51:02:3c:3a:86:ed:65:6e:18:7f:11:91
-      - run: ssh ${USER_NAME}@${HOST_NAME} 'cd /var/www/ && git pull origin main'
+              - "your-ssh-fingerprint"
+      - run:
+          name: Clone lalavel-app repository
+          command: |
+            git clone https://github.com/task-01/lalavel-app.git src/
 
