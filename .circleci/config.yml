@@ -3,20 +3,21 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.2.11-node-browsers
-    working_directory: /app
     steps:
       - checkout
-      - run: mkdir -p /app
-      - run: sudo composer self-update --stable
+      - run: sudo composer self-update --1
       - run: composer install -n --prefer-dist
       - run: npm ci
       - run: npm run dev
       - run:
           name: php test
           command: vendor/bin/phpunit
-
   deploy:
-    docker:
-      - image: circleci/aws-cli
+    machine:
+        image: ubuntu-2004:2023.10.1
     steps:
-      - checkout
+        - checkout
+        - add_ssh_keys:
+            fingerprints:
+                - 69:43:63:c3:51:02:3c:3a:86:ed:65:6e:18:7f:11:91
+        - run: ssh ${USER_NAME}@${HOST_NAME} 'cd /var/www/ && git pull'
