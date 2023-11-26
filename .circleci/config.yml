@@ -26,8 +26,7 @@ jobs:
           command: |
             ssh ${USER_NAME}@${HOST_NAME} 'cd /var/www/ && git clone https://github.com/task-01/lalavel-app.git . || (cd lalavel-app && git pull origin main)'
       - run:
-          name: Check and Change Permissions
-          command: |
-            ls -l /https://github.com/task-01/lalavel-app.git
-            chmod 755 https://github.com/task-01/lalavel-app.git
+          name: Change Permissions for src Directory
+          command: chmod -R 755 /var/www/lalavel-app.git/src
+
 
