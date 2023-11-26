@@ -2,31 +2,30 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/php:7.2.11-node-browsers
-    working_directory: src/
+      - image: circleci/php:7.4-node-browsers
     steps:
       - checkout
-      - run: sudo composer self-update
-      - run: composer install -n --prefer-dist
-      - run: npm ci
-      - run: npm run dev
-      - run:
-          name: php test
-          command: vendor/bin/phpunit
+      - run: composer install
+      - run: npm install
+      - run: npm run production
+      - run: docker build -t myapp .
   deploy:
-    machine:
-      image: ubuntu-2004:2023.10.1
+    machine: true
     steps:
       - checkout
-      - add_ssh_keys:
-          fingerprints:
-              - "69:43:63:c3:51:02:3c:3a:86:ed:65:6e:18:7f:11:91"
-      - run:
-          name: Clone or Pull lalavel-app repository to EC2
-          command: |
-            ssh ${USER_NAME}@${HOST_NAME} 'cd /var/www/ && git clone https://github.com/task-01/lalavel-app.git . || (cd lalavel-app && git pull origin main)'
-      - run:
-          name: Change Permissions for src Directory
-          command: chmod -R 755 /var/www/lalavel-app.git/src
+      - run: |
+          aws configure set aws_access_key_id $AWS_ACCESS_KEY
+          aws configure set aws_secret_access_key $AWS_SECRET_KEY
+          aws configure set default.region $AWS_REGION
+      - run: aws ecs update-service --cluster my-cluster --service my-service --force-new-deployment
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+
 
 
