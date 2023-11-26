@@ -3,10 +3,10 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.4-node-browsers
-    working_directory: /app  # 作業ディレクトリをプロジェクトのルートに設定
+    working_directory: /app
     steps:
       - checkout
-      - setup_remote_docker:  # Dockerサービスを有効にする
+      - setup_remote_docker:
           docker_layer_caching: true
       - run:
           name: Start Docker Compose
@@ -17,6 +17,21 @@ jobs:
       - run: npm install
       - run: npm run production
       - run: docker build -t myapp .
+
+  deploy:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Configure AWS CLI
+          command: |
+            aws configure set aws_access_key_id $AWS_ACCESS_KEY
+            aws configure set aws_secret_access_key $AWS_SECRET_KEY
+            aws configure set default.region $AWS_REGION
+      - run:
+          name: Update AWS ECS Service
+          command: aws ecs update-service --cluster my-cluster --service my-service --force-new-deployment
+
 workflows:
   version: 2
   build-deploy:
