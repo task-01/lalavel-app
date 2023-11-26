@@ -1,32 +1,28 @@
 version: 2.1
 orbs:
-  aws-ecr: circleci/aws-ecr@6.4.0
+  aws-s3: circleci/aws-s3@1.0.11
 
+workflows: # Define a Workflow running the build job, then the deploy job
+  version: 2
+  build-deploy: # Make a workflow to build and deploy your project
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build # Only run deploy job once the build job has completed
+          filters:
+            branches:
+              only: main 
 jobs:
   build:
     docker:
-      - image: circleci/php:7.2.11-node-browsers
+      - image: circleci/php:8.2.12-node-browsers
     steps:
       - checkout
-      - run: sudo composer self-update --1
+      - run: sudo composer self-update --stable
       - run: composer install -n --prefer-dist
       - run: npm ci
       - run: npm run dev
       - run:
           name: php test
           command: vendor/bin/phpunit
-  
-    deploy:
-      docker:
-      - image: mydockerhub-user/my-php-app:latest
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-      steps:
-      - run:
-          name: Install awscli
-          command: sudo pip install awscli
-      - run:
-          name: Deploy to S3
-          command: aws s3 sync /path/to/local/files s3://my-s3-bucket/my-deployment-location
-
