@@ -16,16 +16,17 @@ jobs:
           name: php test
           command: vendor/bin/phpunit
   
-  deploy:
-    docker:
-        - image: mydockerhub-user/my-php-app:latest
-          auth:
-            username: mydockerhub-user
-            password: $DOCKERHUB_PASSWORD 
-    steps:
-        - run:
-            name: Install awscli
-            command: sudo pip install awscli
-        - run:
-            name: Deploy to S3
-            command: aws s3 sync /path/to/local/files s3://my-s3-bucket/my-deployment-location
+    deploy:
+      docker:
+      - image: mydockerhub-user/my-php-app:latest
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
+      steps:
+      - run:
+          name: Install awscli
+          command: sudo pip install awscli
+      - run:
+          name: Deploy to S3
+          command: aws s3 sync /path/to/local/files s3://my-s3-bucket/my-deployment-location
+
