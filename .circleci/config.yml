@@ -16,8 +16,8 @@ jobs:
     steps:
       - checkout
       - run: |
-          aws configure set aws_access_key_id $AWS_ACCESS_KEY
-          aws configure set aws_secret_access_key $AWS_SECRET_KEY
+          aws configure set aws_access_key_id "${AWS_ACCESS_KEY}"
+          aws configure set aws_secret_access_key "${$AWS_SECRET_KEY}"
       - run: aws ecs update-service --cluster my-cluster --service my-service --force-new-deployment
 workflows:
   version: 2
