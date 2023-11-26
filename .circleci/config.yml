@@ -11,7 +11,9 @@ jobs:
       - run: 
           working_directory: src
           command: npm run production
-      - run: docker build -t myapp .
+      - run: 
+          working_directory: src
+          command: docker build -t myapp .
   deploy:
     machine: true
     steps:
