@@ -5,7 +5,9 @@ jobs:
       - image: circleci/php:7.4-node-browsers
     steps:
       - checkout
-      - run: npm install
+      - run: 
+          working_directory: src
+          command: npm install
       - run: npm run production
       - run: docker build -t myapp .
   deploy:
