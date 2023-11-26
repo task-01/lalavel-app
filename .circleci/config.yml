@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.2.11-node-browsers
+    working_directory: src/
     steps:
       - checkout
       - run: sudo composer self-update
