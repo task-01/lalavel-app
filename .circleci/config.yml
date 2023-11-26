@@ -20,7 +20,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-              - "SSHキーのフィンガープリント"
+              - "69:43:63:c3:51:02:3c:3a:86:ed:65:6e:18:7f:11:91"
       - run:
           name: Clone or Pull lalavel-app repository to EC2
           command: |
