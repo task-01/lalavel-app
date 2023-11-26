@@ -6,6 +6,7 @@ jobs:
     working_directory: src/
     steps:
       - checkout
+      - run: ls -l /home/circleci
       - run: sudo composer self-update
       - run: composer install -n --prefer-dist
       - run: npm ci
