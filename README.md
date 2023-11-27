@@ -66,7 +66,7 @@
 ・新規登録後マイページに遷移します
 ＊ログインページも同じ挙動です。
 
-https://github.com/task-01/task/assets/113382858/c11a31dc-f155-4a18-a008-44836d1cb458
+https://github.com/task-01/lalavel-app/assets/113382858/4c3b4a68-b28d-43ec-9ef7-090d4ae5250f
 
 ### 新規登録ページ  
 ・新規登録後マイページへ遷移  
