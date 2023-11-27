@@ -1,64 +1,90 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<div id="top"></div>
+
+## 使用技術一覧
+
+<!-- シールド一覧 -->
+<!-- 該当するプロジェクトの中から任意のものを選ぶ-->
+<p style="display: inline">
+    <img src="https://img.shields.io/badge/-PHP-4F5D95.svg?logo=PHP&style=for-the-badge&logoColor=white">
+    <img src="https://img.shields.io/badge/-Laravel-FF2D20.svg?logo=laravel&style=for-the-badge&logoColor=white">
+    <img src="https://img.shields.io/badge/-Docker-2496ED.svg?logo=docker&style=for-the-badge&logoColor=white">
+    <img src="https://img.shields.io/badge/-AWS-232F3E.svg?logo=amazonaws&style=for-the-badge">
+    <img src="https://img.shields.io/badge/-CircleCI-343434.svg?logo=circleci&style=for-the-badge">
+    <img src="https://img.shields.io/badge/-Nginx-009639.svg?logo=nginx&style=for-the-badge">
+    <img src="https://img.shields.io/badge/-MySQL-4479A1.svg?logo=mysql&style=for-the-badge&logoColor=white">
+    <img src="https://img.shields.io/badge/-PHP--FPM-8892BF.svg?logo=php&style=for-the-badge&logoColor=white">
+    <img src="https://img.shields.io/badge/-bootstrap-7952B3.svg?logo=php&style=for-the-badge&logoColor=white">
 </p>
 
-## About Laravel
+## 目次
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. [プロジェクトについて](#プロジェクトについて)
+2. [環境](#環境)
+3. [ディレクトリ構成](#ディレクトリ構成)
+4. [開発環境構築](#開発環境構築)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<br />
+<!-- プロジェクト名を記載 -->
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## プロジェクト名
 
-## Learning Laravel
+学習記録サイト
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<p align="right"><a href="#top">トップへ</a></p>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<!-- プロジェクトについて -->
 
-## Laravel Sponsors
+## プロジェクトについて背景
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+学習記録を作成・閲覧ができるサイトです。
+他のユーザーの学習状況なども閲覧することができます。
 
-### Premium Partners
+<p align="right"><a href="#top">トップへ</a></p>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## 環境
 
-## Contributing
+<!-- 言語、フレームワーク、ミドルウェア、インフラの一覧とバージョンを記載 -->
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| 言語・フレームワーク・ミドルウェア | バージョン   |
+|--------------------------|--------------|
+| PHP                      | 7.4.33       |
+| Lalavel                  | 8.83.27      |
+| nginx                    | 1.22.1       |
+| Mysql                    | 8.0.35       |
+| Docker                   | 24.0.2       |
+| aws-cli                  | 1.18.147     |
 
-## Code of Conduct
+その他のパッケージのバージョンは package.json を参照してください
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<p align="right"><a href="#top">トップへ</a></p>
 
-## Security Vulnerabilities
+## 機能
+### Topページ  
+・簡易的な人気の旅行先がわかります。  
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![Topページ](https://user-images.githubusercontent.com/113382858/272773110-d0255fc2-868e-4588-808c-18b6f7f022d1.png)  
 
-## License
+### 新規登録ページ  
+・新規登録後マイページへ遷移  
+※ログインも同様の動き  
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+https://github.com/task-01/travelplan-app/assets/113382858/f89cbe59-6b0a-43db-8743-4e27e840d1d5
+
+### 旅行プラン作成ページからマイページへ遷移後セット中旅行プランに追加  
+・旅行プラン作成後マイページへ遷移  
+・マイページでは作成した旅行プランがセット中の旅行プランとして表示される  
+※また、マイページでは他に作成履歴やいいね履歴なども確認可能  
+
+https://github.com/task-01/travelplan-app/assets/113382858/a6d9f7d3-a5e4-4dad-830e-5d526c4f2aa4  
+
+### 前ユーザーの各旅行プランリスト閲覧ページ  
+・各ユーザーの旅行プラン一覧が見れる  
+・条件によって絞り込みや検索機能もある  
+・そして共有機能としてpdfダウンロードもできる
+
+https://github.com/task-01/travelplan-app/assets/113382858/9911ed09-a3c2-4600-95bf-39a4162ddce6
+
+
+<p align="right"><a href="#top">トップへ</a></p>  
