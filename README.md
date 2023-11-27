@@ -72,14 +72,14 @@
 ・新規登録後マイページへ遷移  
 ※ログインも同様の動き  
 
-https://github.com/task-01/task_rails/assets/113382858/457eab76-07b5-485d-9df8-3555b79dcc1d6b0a-43db-8743-4e27e840d1d5
+![学習記録ページ](https://github.com/task-01/lalavel-app/assets/113382858/9f40a298-c460-4029-9da2-f058ea083027)
 
 ### 旅行プラン作成ページからマイページへ遷移後セット中旅行プランに追加  
 ・旅行プラン作成後マイページへ遷移  
 ・マイページでは作成した旅行プランがセット中の旅行プランとして表示される  
 ※また、マイページでは他に作成履歴やいいね履歴なども確認可能  
 
-https://github.com/task-01/travelplan-app/assets/113382858/a6d9f7d3-a5e4-4dad-830e-5d526c4f2aa4  
+https://github.com/task-01/lalavel-app/assets/113382858/9f40a298-c460-4029-9da2-f058ea083027
 
 ### 前ユーザーの各旅行プランリスト閲覧ページ  
 ・各ユーザーの旅行プラン一覧が見れる  
