@@ -70,7 +70,7 @@
 ・新規登録後マイページへ遷移  
 ※ログインも同様の動き  
 
-https://github.com/task-01/travelplan-app/assets/113382858/f89cbe59-6b0a-43db-8743-4e27e840d1d5
+https://github.com/task-01/task_rails/assets/113382858/457eab76-07b5-485d-9df8-3555b79dcc1d6b0a-43db-8743-4e27e840d1d5
 
 ### 旅行プラン作成ページからマイページへ遷移後セット中旅行プランに追加  
 ・旅行プラン作成後マイページへ遷移  
