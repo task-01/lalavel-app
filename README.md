@@ -78,12 +78,9 @@
 
 ![学習記録一覧](https://github.com/task-01/lalavel-app/assets/113382858/f16ffcad-107b-490e-ae31-7665884c5450)
 
-### 前ユーザーの各旅行プランリスト閲覧ページ  
-・各ユーザーの旅行プラン一覧が見れる  
-・条件によって絞り込みや検索機能もある  
-・そして共有機能としてpdfダウンロードもできる
+### 学習して編集ページ　
 
-https://github.com/task-01/travelplan-app/assets/113382858/9911ed09-a3c2-4600-95bf-39a4162ddce6
+![学習記録編集](https://github.com/task-01/lalavel-app/assets/113382858/d3218468-2d7b-4470-b672-d3f3c8abaa97)
 
 
 <p align="right"><a href="#top">トップへ</a></p>  
