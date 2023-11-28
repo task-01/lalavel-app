@@ -18,16 +18,6 @@
     <img src="https://img.shields.io/badge/-bootstrap-7952B3.svg?logo=php&style=for-the-badge&logoColor=white">
 </p>
 
-## 目次
-
-1. [プロジェクトについて](#プロジェクトについて)
-2. [環境](#環境)
-3. [ディレクトリ構成](#ディレクトリ構成)
-4. [開発環境構築](#開発環境構築)
-
-<br />
-<!-- プロジェクト名を記載 -->
-
 ## プロジェクト名
 
 学習記録サイト
