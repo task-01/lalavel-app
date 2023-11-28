@@ -78,7 +78,7 @@
 
 ![学習記録一覧](https://github.com/task-01/lalavel-app/assets/113382858/f16ffcad-107b-490e-ae31-7665884c5450)
 
-### 学習して編集ページ　
+### 学習記録編集ページ　
 
 ![学習記録編集](https://github.com/task-01/lalavel-app/assets/113382858/d3218468-2d7b-4470-b672-d3f3c8abaa97)
 
