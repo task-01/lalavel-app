@@ -63,6 +63,10 @@ http://18.176.57.175
 
 ![HOMEページ](https://github.com/task-01/lalavel-app/assets/113382858/4c3b4a68-b28d-43ec-9ef7-090d4ae5250f)
 
+
+https://github.com/task-01/lalavel-app/assets/113382858/8dc6a7fe-8862-4fd7-a38d-da62332e281d
+
+
 ### 学習記録作成ページ  
 ・学習記録作成後学習記録一覧へ遷移    
 
