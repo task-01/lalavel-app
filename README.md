@@ -61,25 +61,25 @@ http://18.176.57.175
 <br>
 ※ログインページも同じ挙動です。　
 
-![HOMEページ](https://github.com/task-01/lalavel-app/assets/113382858/4c3b4a68-b28d-43ec-9ef7-090d4ae5250f)
-
-
 https://github.com/task-01/lalavel-app/assets/113382858/8dc6a7fe-8862-4fd7-a38d-da62332e281d
 
 
 ### 学習記録作成ページ  
 ・学習記録作成後学習記録一覧へ遷移    
 
-![学習記録ページ](https://github.com/task-01/lalavel-app/assets/113382858/9f40a298-c460-4029-9da2-f058ea083027)
+https://github.com/task-01/lalavel-app/assets/113382858/9da76963-41a1-450f-ab53-7d64a981d1bb
+
 
 ### 学習記録一覧ページ
 ・学習記録一覧では全体と自分のみに分けて閲覧できます。
 
-![学習記録一覧](https://github.com/task-01/lalavel-app/assets/113382858/f16ffcad-107b-490e-ae31-7665884c5450)
+https://github.com/task-01/lalavel-app/assets/113382858/f004c6ae-7c44-4411-bb09-62fda261ec23
+
 
 ### 学習記録編集ページ　
 
-![学習記録編集](https://github.com/task-01/lalavel-app/assets/113382858/d3218468-2d7b-4470-b672-d3f3c8abaa97)
+https://github.com/task-01/lalavel-app/assets/113382858/52ecd272-1e4f-43ff-9c40-ee72f241eef7
+
 
 
 <p align="right"><a href="#top">トップへ</a></p>  
